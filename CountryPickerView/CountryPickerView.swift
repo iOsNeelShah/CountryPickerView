@@ -163,6 +163,7 @@ public class CountryPickerView: NibView {
             }
         } else {
             let navigationVC = UINavigationController(rootViewController: countryVc)
+			navigationVC.navigationBar.barTintColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
             delegate?.countryPickerView(self, willShow: countryVc)
             viewController.present(navigationVC, animated: true) {
                 self.delegate?.countryPickerView(self, didShow: countryVc)
